@@ -1,0 +1,11 @@
+.hero {
+  max-width: 110%;
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 850px) {
+  .hero {
+    max-width: 100%;
+    margin-top: 0rem;
+  }
+}

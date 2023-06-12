@@ -1,0 +1,122 @@
+.NavbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  width: 95%;
+  height: 80px;
+  border-radius: 13px;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.logo {
+  width: 200px;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+}
+
+.nav-links {
+  color: #000;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+}
+
+.nav-links:hover {
+  /* background-color: #000435;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  color: #fff; */
+  color: gray;
+}
+
+.fa-bars,
+.fa-times {
+  cursor: pointer;
+}
+
+.menu-icons {
+  display: none;
+}
+
+/* .nav-links-mobile {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  background-color: #0077ff;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+} */
+@media screen and (max-width: 850px) {
+  .NavbarItems {
+    z-index: 99;
+  }
+
+  .logo {
+    width: 150px;
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 13px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-menu.active {
+    left: 0%;
+  }
+
+  .nav-links {
+    display: block;
+    widows: 100%;
+    padding: 0.8rem 0;
+  }
+
+  .menu-icons {
+    display: block;
+  }
+
+  /* .nav-links-mobile {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 60%;
+    margin: auto;
+  } */
+}
